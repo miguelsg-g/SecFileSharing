@@ -111,22 +111,6 @@ def decrypt_file(input_file_path, symmetric_key, mode=AES.MODE_CBC): # mode es u
             decrypted_file = InMemoryUploadedFile(file=decrypted_file_bytes, name=input_file_name, field_name=input_file_name, content_type=None, size=len(decrypted_content), charset=None) # Crea un objeto InMemoryUploadedFile
             return decrypted_file
 
-def save_private_key(user, private_key):
-    private_key_str = private_key.decode('utf-8')
-    decoded_private_key = PEM.decode(private_key_str)[0]
-    if not isinstance(decoded_private_key, bytes):
-        raise TypeError("Private key must be a byte string")
-    # Cifra la clave privada con una contraseña
-    encrypted_private_key = PEM.encode(data=decoded_private_key, marker='RSA PRIVATE KEY',passphrase=settings.ADMIN_PRIVATE_KEY_PASSPHRASE.encode('utf-8'))
-    # Guarda la clave privada cifrada en un archivo. Si la carpeta no existe, la crea
-    if not os.path.exists(settings.PRIVATE_KEY_FOLDER):
-        os.makedirs(settings.PRIVATE_KEY_FOLDER)
-    filename = f'{user.username}_private_key.pem'
-    file_path = os.path.join(settings.PRIVATE_KEY_FOLDER, filename)
-    with open(file_path, 'wb') as file:
-        file.write(encrypted_private_key.encode('utf-8'))
-    return file_path
-
 def get_user_private_key(user):
     filename = f'{user.username}_private_key.pem'
     file_path = os.path.join(settings.PRIVATE_KEY_FOLDER, filename)
