@@ -1,0 +1,74 @@
+.dashboard-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.personal-page-link {
+    text-decoration: none;
+    color: #219b23;
+    display: flex;
+    font-size: 1em;
+}
+
+.personal-page-link:hover {
+    color: #008000; /* Cambia a verde al pasar el ratón */
+}
+
+.group-list {
+    list-style: none;
+    padding: 0;
+}
+
+.group-item {
+    margin: 10px 0;
+}
+
+.group-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: left;
+}
+
+.group-link:hover {
+    color: #008000; /* Cambia a verde al pasar el ratón */
+}
+
+.group-icon {
+    margin-right: 10px;
+}
+
+.page-header {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* alineamos el texto a la izquierda de la página */
+    text-align: left;
+}
+
+.page-header h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    text-align: left;
+    row-gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.user-greeting {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: left;
+    color: #333;
+    font-size: 1em;
+}

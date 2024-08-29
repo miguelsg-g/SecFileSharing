@@ -1,0 +1,58 @@
+.access-requests-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.access-requests-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.access-request-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.access-request-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.reject-button {
+    color: #f44336;
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reject-button:hover {
+    color: #e31e1e;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #45a048;
+}
+
+.request-info {
+    display: flex;
+    align-items: left;
+}

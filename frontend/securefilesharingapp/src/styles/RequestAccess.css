@@ -1,0 +1,35 @@
+.request-access-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.request-access-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.request-access-container .btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.request-access-container .btn:hover {
+    background-color: #45a049;
+}
+
+.request-access-container .error {
+    color: red;
+}
+
+.request-access-container .success {
+    color: green;
+}
+
+.request-access-container .info {
+    color: blue;
+}

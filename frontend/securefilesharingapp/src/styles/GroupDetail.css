@@ -1,0 +1,140 @@
+.group-detail-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-detail-container h1,
+.group-detail-container h2,
+.group-detail-container h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.group-detail-container p {
+    margin: 10px 0;
+}
+
+.group-detail-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.group-detail-container .group-item {
+    margin: 10px 0;
+}
+
+.group-detail-container .group-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.group-detail-container .group-link:hover {
+    color: #008000;
+}
+
+.group-detail-container .group-icon {
+    margin-right: 10px;
+}
+
+.group-detail-container .links-container {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.group-detail-container .links-container a {
+    display: block;
+    margin: 10px 0;
+    color: #008000;
+    text-decoration: none;
+}
+
+.group-detail-container .links-container a:hover {
+    text-decoration: underline;
+}
+
+.group-files,
+.members-section {
+    margin-top: 20px;
+}
+
+.file-list,
+.member-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-item,
+.member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.file-link {
+    color: #008000;
+    text-decoration: none;
+}
+
+.file-link:hover {
+    color: #0d84c0;
+    background-color: transparent; /* Ensure no background color is applied */
+}
+
+.upload-button {
+    background-color: white;
+    color: #4caf50;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.upload-button:hover {
+    color: #146716;
+}
+
+.file-download-btn {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.file-delete-btn,
+.remove-member-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+    margin-left: 10px;
+}
+
+.file-download-btn:hover,
+.file-delete-btn:hover,
+.remove-member-button:hover {
+    opacity: 0.8;
+    color: #dc3545;
+}
+
+.access-requests-list-link {
+    text-decoration: none;
+    color: #4caf50;
+}
+
+.access-requests-list-link:hover {
+    color: #146716;
+}

@@ -1,0 +1,141 @@
+.personal-page-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.page-header h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.group-list {
+    list-style: none;
+    padding: 0;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.group-link {
+    text-decoration: none;
+    color: #333;
+    /* display: flex;
+    align-items: center; */
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.group-link:hover {
+    color: #008000; /* Cambia a verde al pasar el ratón */
+}
+
+.group-icon {
+    margin-right: 10px;
+}
+
+.links-container {
+    margin: 20px 0;
+    /* text-align: left; */
+}
+
+.links-container a {
+    display: block;
+    margin: 10px 0;
+    color: #008000;
+    text-decoration: none;
+}
+
+.links-container a:hover {
+    text-decoration: none;
+    color: #0f94d1; /* Cambia a verde al pasar el ratón */
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    color: #f00;
+}
+
+.create-group-link, .upload-file-link {
+    display: block;
+    color: #28a745;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.create-group-link:hover, .upload-file-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.access-request-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
