@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de acceso al grupo</title>
+    <style>
+        /* Reseteo básico de estilos */
+        body, p, div {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            color: #333333;
+        }
+        body {
+            background-color: #f6f6f6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333333;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitud de acceso al grupo</h1>
+        <p>Hola {{ owner.username }},</p>
+        <p>{{ requester.username }} ha solicitado acceso a tu grupo {{ requested_group.group_name }}.</p>
+        <p>Puedes aceptar o rechazar esta solicitud usando los botones a continuación:</p>
+        <p>
+            <form action="{{ accept_url }}" method="post">
+                <button type="submit" class="button">Aceptar solicitud</button>
+            </form>
+        </p>
+        <p>
+            <form action="{{ reject_url }}" method="post">
+                <button type="submit" class="button">Rechazar solicitud</button>
+            </form>
+        </p>
+        <p>Saludos,</p>
+        <p>La administración de la aplicación.</p>
+        <div class="footer">
+            <p>&copy; 2024 SecFileSharingApp. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

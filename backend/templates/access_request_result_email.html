@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la solicitud de acceso al grupo</title>
+    <style>
+        /* Reseteo básico de estilos */
+        body, p, div {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            color: #333333;
+        }
+        body {
+            background-color: #f6f6f6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333333;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Definimos una variable access_request_status con "rechazado" o "aceptado" según el status recibido del backend-->
+    <div class="container">
+        <h1>Resultado de la solicitud de acceso al grupo</h1>
+        <p>Hola {{ access_request.requester.username }},</p>
+        <p>El usuario <strong>{{ access_request.requested_group.owner.username }}</strong> ha {{ status }} tu solicitud de acceso al grupo <strong>{{ access_request.requested_group.group_name }}</strong>.</p>
+        <p>Para más información, puedes contactar con el propietario del grupo en <a href="mailto:{{ access_request.requested_group.owner.email }}">{{ access_request.requested_group.owner.email }}</a>.</p>
+        <p>Un saludo,</p>
+        <p>El equipo de SecFileSharingApp</p>
+    </div>
+</html>

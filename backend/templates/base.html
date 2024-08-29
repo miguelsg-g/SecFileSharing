@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'SecFileSharingApp/css/estilos.css' %}">
+    <link rel="icon" href="{% static 'SecFileSharingApp/favicon.ico' %}" type="image/x-icon">
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div {% if message.tags %} class="alert {{ message.tags }}"{% endif %}>{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <title>SecFileSharingApp</title>
+</head>
+<body>
+    <h1>SecFileSharingApp</h1>
+    <header>
+        <nav>
+            {% if user.is_authenticated %}
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'personal_page' %}">Mi página personal</a>
+                <a href="{% url 'logout' %}">Cerrar sesión</a>
+                <p> Hola, {{ request.user.username }} </p>
+            {% else %}
+                <a href="{% url 'register' %}">Registrarse</a>
+                <a href="{% url 'login' %}">Iniciar sesión</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Este bloque se reemplaza en los templates que heredan de este. -->
+        {% endblock %}
+
+        {% block scripts %}
+        <!-- Este bloque se reemplaza en los templates que heredan de este. -->
+        {% endblock %}
+        
+    </main>
+</body>
+</html>
