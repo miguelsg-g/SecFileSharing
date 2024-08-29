@@ -111,23 +111,6 @@ def decrypt_file(input_file_path, symmetric_key, mode=AES.MODE_CBC): # mode es u
             decrypted_file = InMemoryUploadedFile(file=decrypted_file_bytes, name=input_file_name, field_name=input_file_name, content_type=None, size=len(decrypted_content), charset=None) # Crea un objeto InMemoryUploadedFile
             return decrypted_file
 
-def sign_file(private_key, file_data):
-    # Calcula el hash SHA-256 del contenido del archivo
-    file_hash = SHA256.new(file_data)
-    # Firma digital usando RSA y PKCS1 v1.5
-    signature = pkcs1_15.new(private_key).sign(file_hash)
-    return signature
-
-def verify_signature(public_key, file_data, signature):
-    # Calcula el hash SHA-256 del contenido del archivo
-    file_hash = SHA256.new(file_data)
-    try:
-        # Verifica la firma digital usando RSA y PKCS1 v1.5
-        pkcs1_15.new(public_key).verify(file_hash, signature)
-        return True
-    except (ValueError, TypeError):
-        return False
-
 def save_private_key(user, private_key):
     private_key_str = private_key.decode('utf-8')
     decoded_private_key = PEM.decode(private_key_str)[0]
