@@ -1,0 +1,14 @@
+import { Navigate } from 'react-router-dom'
+
+
+const PrivateRoute = ({children, ...rest}) => { // rest is the rest of the props passed to the component
+    // if user is logged in, render the children, otherwise redirect to login
+    if (localStorage.getItem('authToken') === null) {
+        return <Navigate to='/login'/>;
+    }
+    else {
+        return children;
+    }
+}
+
+export default PrivateRoute;
