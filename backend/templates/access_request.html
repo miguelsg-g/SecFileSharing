@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Solicitudes de acceso</h1>
+  {% if requests %}
+    <ul>
+      {% for request in requests %}
+        <li>{{ request.user }} quiere acceder al archivo {{ request.file }}</li>
+        <form method="post">
+          {% csrf_token %}
+          <input type="hidden" name="request_id" value="{{ request.id }}">
+          <button type="submit">Aprobar</button>
+        </form>
+        <form method="post">
+          {% csrf_token %}
+          <input type="hidden" name="request_id" value="{{ request.id }}">
+          <button type="submit">Rechazar</button>
+        </form>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay solicitudes de acceso pendientes.</p>
+  {% endif %}
+{% endblock %}
