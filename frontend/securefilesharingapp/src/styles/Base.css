@@ -1,0 +1,61 @@
+.base-container {
+    background-color: #c4eec4; /* Fondo verde claro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    background-color: rgb(101, 196, 101); /* Fondo verde oscuro */
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    box-sizing: border-box;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 2em;
+    color: white; /* Texto blanco para contraste con el fondo oscuro */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.lock-icon {
+    font-size: 2em;
+    color: #666;
+}
+
+.nav-link {
+    margin: 0 10px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #008000; /* Cambia a verde al pasar el ratón */
+}
+
+.messages {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.alert {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffdddd;
+    color: #a33;
+}
